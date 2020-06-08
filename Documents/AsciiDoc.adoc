@@ -1,0 +1,181 @@
+= AsciiDoc: Hints & Tips
+:author: Lars Moerlin; Anthony Galiamov
+:revdate: 06.05.2020
+:revnumber: v1.0
+:toc-title: My Content
+:sectnums:
+:toc:
+:toclevels: 5
+:icons: font
+:experimental:
+:quick-uri: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
+
+== Overview
+This document is intended to be a source for hints and tips writing documents in AsciiDoc. 
+
+Feel free to add items you found useful or if you solved an issue you have come across.
+
+== Document Attributes
+
+----
+= AsciiDoc Hints & Tips: Subtitle
+:author: Emily Johnson
+:email: emily@ibm.com
+:revdate: 01.01.2020
+:revnumber: v1.0
+:revremark: First draft
+:toc-title: My Content
+:sectnums:
+:toc:
+:toclevels: 5
+:icons: font
+:description: Example AsciiDoc document
+:keywords: AsciiDoc
+:experimental:
+----
+
+<1> *title*: This is the documents title including a subtitle
+<2> *author*: Author of the document
+<3> *email*: Email of the author
+<4> *revdate*: Revision date
+<5> *revnumber*: 	Revision number of the document
+<6> *revremark*: Revision remark
+<7> *toc-title*: By default, the TOC will get the title "Table of Contents"
+<8> *sectnums*: Defines that you want numbered sections
+<9> *toc*: Table of contents
+<10> *toclevels*: By default, the TOC will display only level 1 and level 2 section titles
+<11> *icons*: Enables the icons feature
+<12> *description*:
+<13> *keywords*:
+<14> *experiemtnal*: Enables experimental features, like button and menu paths
+
+== Publishing
+When you want to publish a document in GitHub or GitLab it has to have the file ending `.asciidoc` instead of `.adoc` to render correctly.
+
+== Position of the TOC
+
+You can define the position of the toc.
+----
+:toc:
+:toc: left
+:toc: right
+----
+
+== Inline Icons
+You can also add the `:icons: font` directive to the top of your document, which allows you to use the icons from https://fontawesome.com/icons directory via a marco.
+
+icon:comment[] A comment icon
+
+icon:file[] And a file icon
+
+icon:print[] And a print icon
+
+== Menues and Buttons
+With the keyboard macro `kbd:[shortcut]` we can include nicely formatted keyboard shortcuts.
+
+menu:View[Zoom > Reset]
+
+Press the `kbd:[OK]` button when you are finished.
+
+kbd:[Alt+F11] - Toggle Full Screen Mode in the Eclipse IDE
+
+== Embedding code
+
+[source,json]
+----
+"asciidoc.preview.useEditorStyle": false
+----
+
+[source,xml]
+----
+<section>
+  <title>Section Title</title> <!--1-->
+</section>
+----
+<1> The section title is required.
+
+== Images
+
+.Logo
+image::images/dc_image.jpg[Image alt name, 400, 500]
+
+This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
+
+== Diagrams and Data
+
+=== Sequence diagram
+
+// Link to edit the sequence diagram: https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5cdEFsaWNlLT4-K0pvaG46IEhlbGxvIEpvaG4sPGJyPmhvdyBhcmUgeW91P1xuXHRBbGljZS0-PitKb2huOiBKb2huLCA8YnI-Y2FuIHlvdSBoZWFyIG1lP1xuXHRKb2huLS0-Pi1BbGljZTogSGkgQWxpY2UsPGJyPkkgY2FuIGhlYXIgeW91IVxuXHRKb2huLS0-Pi1BbGljZTogSSBmZWVsIGdyZWF0IVxuXHRcdFx0XHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9
+
+image::https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5cdEFsaWNlLT4-K0pvaG46IEhlbGxvIEpvaG4sPGJyPmhvdyBhcmUgeW91P1xuXHRBbGljZS0-PitKb2huOiBKb2huLCA8YnI-Y2FuIHlvdSBoZWFyIG1lP1xuXHRKb2huLS0-Pi1BbGljZTogSGkgQWxpY2UsPGJyPkkgY2FuIGhlYXIgeW91IVxuXHRKb2huLS0-Pi1BbGljZTogSSBmZWVsIGdyZWF0IVxuXHRcdFx0XHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9[diagram,,500]
+
+=== Table
+
+[%header,format=csv]
+|===
+Name,Description
+Data 1,Result
+Data 2,Some more results
+Data 3,And even more
+|===
+
+== Formatting Text
+
+.Unordered list title
+* list item 1
+** nested list item
+*** nested nested list item 1
+*** nested nested list item 2
+* list item 2
+
+This is a paragraph.
+
+.Example block title
+====
+Content in an example block is subject to normal substitutions.
+====
+
+.Sidebar title
+****
+Sidebars contain aside text and are subject to normal substitutions.
+****
+
+=== Listing Blocks
+
+[#id-for-listing-block]
+.Listing block title
+----
+Content in a listing block is subject to verbatim substitutions.
+Listing block content is commonly used to preserve code input.
+----
+
+
+===== Forth level heading
+
+[quote, firstname lastname, movie title]
+____
+I am a block quote or a prose excerpt.
+I am subject to normal substitutions.
+____
+
+[verse, firstname lastname, poem title and more]
+____
+I am a verse block.
+  Indents and endlines are preserved in verse blocks.
+____
+
+== Admonition Labels
+
+TIP: There are five admonition labels: Tip, Note, Important, Caution and Warning.
+
+// I am a comment and won't be rendered.
+
+. ordered list item
+.. nested ordered list item
+. ordered list item
+
+The text at the end of this sentence is cross referenced to <<Diagrams_and_Data,Diagrams and Data>>
+
+== Linking to Pages
+This is a link to the https://asciidoctor.org/docs/user-manual/[Asciidoctor User Manual].
+This is an attribute reference {quick-uri}[which links this text to the Asciidoctor Quick Reference Guide].
