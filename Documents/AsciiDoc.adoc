@@ -61,6 +61,16 @@ You can define the position of the toc.
 :toc: right
 ----
 
+== Headings
+[source,text]
+----
+== Level 1 Section Title
+=== Level 2 Section Title
+==== Level 3 Section Title
+===== Level 4 Section Title
+====== Level 5 Section Title
+----
+
 == Inline Icons
 You can also add the `:icons: font` directive to the top of your document, which allows you to use the icons from https://fontawesome.com/icons directory via a marco.
 
@@ -94,12 +104,40 @@ kbd:[Alt+F11] - Toggle Full Screen Mode in the Eclipse IDE
 ----
 <1> The section title is required.
 
+=== Listing Blocks
+
+[#id-for-listing-block]
+.Listing block title
+----
+Content in a listing block is subject to verbatim substitutions.
+Listing block content is commonly used to preserve code input.
+----
+
+=== Display source from a file
+[source,javascript]
+----
+include::config/sample.js[]
+----
+
+=== Collapsible block
+.Click here for sample output
+[%collapsible]
+====
+[source,text]
+----
+this is a line
+this is another line
+----
+====
+
 == Images
+You can add alternative names to images incase they can't be found, additionally, you can restrict the size of them. This is managed by the square brakets after the images path.
+----
+image::path_to_image.jpg[image_alt_name, height, width]
+----
 
 .Logo
 image::images/dc_image.jpg[Image alt name, 400, 500]
-
-This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
 
 == Diagrams and Data
 
@@ -119,15 +157,45 @@ Data 2,Some more results
 Data 3,And even more
 |===
 
-== Formatting Text
+== Lists
+You can add a title to a list by prefixing the title with a period (.)
 
-.Unordered list title
+=== Unordered lists
+
+.Unordered List Title 1
+* Entry 1
+* Entry 2
+
+.Unordered List Title 2
 * list item 1
 ** nested list item
 *** nested nested list item 1
 *** nested nested list item 2
 * list item 2
 
+=== Ordered lists
+Simply use a `.` to define a numbered list
+
+. Protons
+. Electrons
+. Neutrons
+
+Start at a particular number, in this case 5
+
+[start=5]
+. Step five
+. Step six
+. Step seven
+
+==== Nested numbered lists 
+
+. Step 1
+. Step 2
+.. Step 2a
+.. Step 2b
+. Step 3
+
+== Formatting Text
 This is a paragraph.
 
 .Example block title
@@ -139,15 +207,6 @@ Content in an example block is subject to normal substitutions.
 ****
 Sidebars contain aside text and are subject to normal substitutions.
 ****
-
-=== Listing Blocks
-
-[#id-for-listing-block]
-.Listing block title
-----
-Content in a listing block is subject to verbatim substitutions.
-Listing block content is commonly used to preserve code input.
-----
 
 
 ===== Forth level heading
