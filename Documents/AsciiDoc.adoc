@@ -233,7 +233,7 @@ TIP: There are five admonition labels: Tip, Note, Important, Caution and Warning
 .. nested ordered list item
 . ordered list item
 
-The text at the end of this sentence is cross referenced to <<Diagrams_and_Data,Diagrams and Data>>
+The text at the end of this sentence is cross referenced to <<_diagrams_and_data,Diagrams and Data>>
 
 == Linking to Pages
 This is a link to the https://asciidoctor.org/docs/user-manual/[Asciidoctor User Manual].
