@@ -8,6 +8,7 @@
 :toclevels: 5
 :icons: font
 :experimental:
+:hardbreaks:
 :quick-uri: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 
 == Overview
@@ -32,6 +33,7 @@ Feel free to add items you found useful or if you solved an issue you have come 
 :description: Example AsciiDoc document
 :keywords: AsciiDoc
 :experimental:
+:hardbreaks:
 ----
 
 <1> *title*: This is the documents title including a subtitle
@@ -48,6 +50,7 @@ Feel free to add items you found useful or if you solved an issue you have come 
 <12> *description*:
 <13> *keywords*:
 <14> *experiemtnal*: Enables experimental features, like button and menu paths
+<15> *hardbreaks*: Keep line breaks in paragraphs
 
 == Publishing
 When you want to publish a document in GitHub or GitLab it has to have the file ending `.asciidoc` instead of `.adoc` to render correctly.
