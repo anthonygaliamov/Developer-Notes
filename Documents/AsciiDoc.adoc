@@ -36,9 +36,9 @@ Feel free to add items you found useful or if you solved an issue you have come 
 :hardbreaks:
 ----
 
-<1> *title*: This is the documents title including a subtitle
-<2> *author*: Author of the document
-<3> *email*: Email of the author
+* *title*: This is the documents title including a subtitle
+* **author*: Author of the document
+* **email*: Email of the author
 <4> *revdate*: Revision date
 <5> *revnumber*: 	Revision number of the document
 <6> *revremark*: Revision remark
@@ -91,6 +91,17 @@ menu:View[Zoom > Reset]
 Press the `kbd:[OK]` button when you are finished.
 
 kbd:[Alt+F11] - Toggle Full Screen Mode in the Eclipse IDE
+
+----
+Menu options/flows:
+menu:View[Zoom > Reset]
+
+Inline buttons:
+Starting text `kbd:[shortcut]` ending text
+
+Buttons:
+kbd:[Alt+F11]
+----
 
 == Embedding code
 

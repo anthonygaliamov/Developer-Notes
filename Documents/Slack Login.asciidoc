@@ -1,0 +1,31 @@
+= Logging into Slack with IBM Credentials
+:author: Anthony Galiamov
+:email: anthony.galiamov@ibm.com
+:revdate: 02.10.2020
+:revnumber: v1.0
+:toc-title: Table of Contents
+:sectnums:
+:toc:
+:toclevels: 5
+:icons: font
+:experimental:
+:hardbreaks:
+
+== Overview
+This document will take you through the process of installing and logging into Slack with your IBM credentials.
+
+== Walk-through
+Below is a video showing the process of logging into the Slack app on a Android device (personal). This can also be completed on an IBM issued Apple device as well.
+
+Link to video in Box: https://ibm.ent.box.com/file/725621312784[]
+
+=== Steps
+
+. Download Slack from the https://itunes.apple.com/app/slack-app/id618783545?ls=1&mt=8[Apple App Store] or https://play.google.com/store/apps/details?id=com.Slack[Google Play Store].
+. Open the Slack application once it has been downloaded.
+. Click `kbd:[Sign in]`.
+. Click `kbd:[I'll sign in manually]`.
+. Enter "ibm" as the workspace and click `kbd:[Next]`.
+. Click `kbd:[Sign in with IBM W3id]`.
+. Sign in with your IBM credentials and complete the second factor authentication.
+. You are now signed into Slack with your IBM credentials.
